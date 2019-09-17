@@ -21,7 +21,7 @@ class Game {
     function init() {
       lives = 5;
 
-      word = WORD_LIST[Math.floor(Math.random() * WORD_LIST.length)]; // TODO: récupérer un mot random depuis WORD_LIST (1 ligne)
+      word = WORD_LIST[Math.round(Math.random() * WORD_LIST.length - 1)]; // TODO: récupérer un mot random depuis WORD_LIST (1 ligne)
       letters = [];
       // Count without duplicated
       missing = Array.prototype.filter.call(word, (letter, i) => {
